@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+dist
+.nyc_output
+coverage
+test-reports
+stats.html
+.env
