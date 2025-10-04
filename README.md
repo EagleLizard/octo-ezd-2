@@ -6,3 +6,8 @@ Coding scratchpad for the month of October 2025. Names after latin / greek _octo
 ## Markdown (CommonMark) parser
 
 I am going to continue my efforts to write my own markdown parser. This continues some experiments in [februum-ezd](https://github.com/EagleLizard/februum-ezd/tree/main).
+
+### prior art
+
+[markedjs](https://github.com/markedjs/marked/tree/master) is popular.
+

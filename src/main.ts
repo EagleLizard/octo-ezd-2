@@ -1,15 +1,10 @@
 
 import 'source-map-support/register';
 
-const cmd_map = {
-  markdown: 'md',
-  etc: 'etc',
-} as const;
-type OctoCommand = keyof typeof cmd_map;
-type OctoArgs = {
-  cmd: OctoCommand;
-  restArgs: string[];
-} & {};
+import { OctoArgs } from './lib/models/octo-args';
+import { OctoCommand, octoCommand } from './lib/models/octo-command';
+
+const cmd_map = octoCommand.cmd_map;
 
 (async () => {
   try {
@@ -26,7 +21,7 @@ async function main() {
   oArgs = parseArgs();
   switch(oArgs?.cmd) {
     case 'markdown':
-      await (await import('./cmd/md/md-main')).mdMain();
+      await (await import('./cmd/md/md-main')).mdMain(oArgs);
       break;
     default:
       printCmds();
